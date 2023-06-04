@@ -31,18 +31,18 @@
 <div class="wrap-body">
 
     {% block header %}
-    {% include 'base/header.html' %}
+        {% include 'base/header.html' %}
     {% endblock header %}
-
-    {% block home %}{% endblock home %}
 
     <section id="container">
         <div class="wrap-container">
-
+            {% block main %}{% endblock main %}
         </div>
     </section>
 
-    {% include 'base/footer.html' %}
+    {% block footer %}
+        {% include 'base/footer.html' %}
+    {% endblock footer %}
 
 </div>
 {% block bottom_js %}{% endblock bottom_js %}
