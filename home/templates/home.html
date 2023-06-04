@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block header %}
+    {{ block.super }}
     {% include 'home/header.html' %}
 {% endblock header %}
 
@@ -12,5 +13,6 @@
 {% endblock main %}
 
 {% block footer %}
+    {{ block.super }}
     {% include 'home/footer.html' %}
 {% endblock footer %}

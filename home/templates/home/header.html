@@ -1,12 +1,8 @@
 {% load static %}
 <div id="owl-slide" class="owl-carousel">
-    <div class="item">
-        <img src="{% static 'images/slide1.jpg' %}"/>
-    </div>
-    <div class="item">
-        <img src="{% static 'images/slide2.jpg' %}"/>
-    </div>
-    <div class="item">
-        <img src="{% static 'images/slide3.jpg' %}"/>
-    </div>
+    {% for element in carousel %}
+        <div class="item">
+            <img src="{% static element %}"/>
+        </div>
+    {% endfor %}
 </div>
