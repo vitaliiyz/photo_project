@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,13 +8,13 @@
     <meta name="author" content="https://www.zerotheme.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     {% block top_styles %}{% endblock top_styles %}
-    <link rel="stylesheet" href="css/zerogrid.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/menu.css">
-    <script src="js/jquery1111.min.js" type="text/javascript"></script>
-    <script src="js/script.js"></script>
-    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/zerogrid.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <script src="{% static 'js/jquery1111.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <link href="{% static 'owl-carousel/owl.carousel.css' %}" rel="stylesheet">
     <div style=' clear: both; text-align:center; position: relative;'>
         <a href="http://windows.microsoft.com/en-US/internet-explorer/Items/ie/home?ocid=ie6_countdown_bannercode">
             <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0"
@@ -23,14 +24,14 @@
     </div>
     {% block bottom_styles %}{% endblock bottom_styles %}
     {% block head_js %}{% endblock head_js %}
-    <script src="js/html5.js"></script>
-    <script src="js/css3-mediaqueries.js"></script>
+    <script src="{% static 'js/html5.js' %}"></script>
+    <script src="{% static 'js/css3-mediaqueries.js' %}"></script>
 </head>
 <body class="contact-page">
 <div class="wrap-body">
 
     {% block header %}
-        {% include 'base/header.html' %}
+    {% include 'base/header.html' %}
     {% endblock header %}
 
     {% block home %}{% endblock home %}
@@ -44,6 +45,6 @@
     {% include 'base/footer.html' %}
 
 </div>
-    {% block bottom_js %}{% endblock bottom_js %}
+{% block bottom_js %}{% endblock bottom_js %}
 </body>
 </html>
