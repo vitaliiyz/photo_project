@@ -30,9 +30,10 @@
 <body class="contact-page">
 <div class="wrap-body">
 
-    {% block header %}
+    <header class="">
         {% include 'base/header.html' %}
-    {% endblock header %}
+        {% block slider %}{% endblock slider %}
+    </header>
 
     <section id="container">
         <div class="wrap-container">
@@ -40,9 +41,7 @@
         </div>
     </section>
 
-    {% block footer %}
         {% include 'base/footer.html' %}
-    {% endblock footer %}
 
 </div>
 {% block bottom_js %}{% endblock bottom_js %}

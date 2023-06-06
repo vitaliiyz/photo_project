@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 
-{% block header %}
-    {{ block.super }}
-    {% include 'home/header.html' %}
-{% endblock header %}
+{% block slider %}
+    {% include 'home/carousel.html' %}
+{% endblock slider %}
 
 {% block main %}
     {% include 'home/about_us.html' %}
@@ -12,7 +11,6 @@
     {% include 'home/articles.html' %}
 {% endblock main %}
 
-{% block footer %}
-    {{ block.super }}
-    {% include 'home/footer.html' %}
-{% endblock footer %}
+{% block bottom_js %}
+    {% include 'home/footer_script.html' %}
+{% endblock bottom_js %}
