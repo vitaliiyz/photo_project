@@ -48,5 +48,9 @@ GALLERIES = [
 ]
 
 
-def home_page(request):
-    return render(request, "home.html", {"carousel": head_imgs, "galleries": GALLERIES})
+def home(request):
+    return render(request, "home.html", {"carousel": head_imgs, "galleries": GALLERIES, "page_tag": "home"})
+
+
+def about(request):
+    return render(request, "about.html", {"page_tag": "about"})
