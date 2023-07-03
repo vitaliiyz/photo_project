@@ -8,6 +8,7 @@ def contact(request):
     if request.method == "POST":
         cform = ContactForm(request.POST)
         if cform.is_valid():
+            cform.save()
             messages.info(request, "Completed :)")
             return redirect("contact_page")
     return render(request, "contact.html", {"cform": cform, "page_tag": "contact"})
