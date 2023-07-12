@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "home",
     "contact",
+    "account",
 ]
 
 MIDDLEWARE = [
@@ -109,3 +110,7 @@ STATICFILES_DIRS = [BASE_DIR / "photo_art" / "static"]
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+LOGIN_REDIRECT_URL = "/"
+LOGIN_URL = "/account/login"
+LOGOUT_REDIRECT_URL = "/"

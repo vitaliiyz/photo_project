@@ -24,5 +24,11 @@
         </li>
         <li {% if page_tag == 'about' %}class="active"{% endif %}><a href="{% url 'about_page' %}"><span>About</span></a></li>
         <li class="last {% if page_tag == 'contact' %}active{% endif %}"><a href="{% url 'contact_page' %}"><span>Contact</span></a></li>
+        {% if user.is_authenticated %}
+        <li class="last"><a href="{% url 'logout' %}"><span>Logout from {{ user.username }}</span></a></li>
+        {% else %}
+        <li class="last"><a href="{% url 'login' %}"><span>Login</span></a></li>
+        <li class="last"><a href="{% url 'registration_page' %}"><span>Registration</span></a></li>
+        {% endif %}
     </ul>
 </div>
