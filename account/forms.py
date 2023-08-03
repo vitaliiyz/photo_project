@@ -11,7 +11,7 @@ class RegistrationForm(forms.ModelForm):
         model = User
         fields = ("username", "email", "password")
         widgets = {
-            "username": forms.TextInput(attrs={"id": "username", "required": "required",}),
+            "username": forms.TextInput(attrs={"id": "username", "required": "required"}),
             "email": forms.EmailInput(attrs={"id": "email", "required": "required"}),
             "password": forms.PasswordInput(attrs={"id": "password", "required": "required"}),
         }

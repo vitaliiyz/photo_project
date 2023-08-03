@@ -6,13 +6,13 @@
     <ul>
         <li {% if page_tag == 'home' %}class="active"{% endif %} ><a href="{% url 'home_page' %}"><span>Home</span></a></li>
         <li {% if page_tag == 'gallery' %}class="active"{% endif %} ><a href="gallery.html"><span>Gallery</span></a></li>
-        <li class="has-sub {% if page_tag == 'blog' %}active{% endif %}"><a href="archive.html"><span>Blog</span></a>
+        <li class="has-sub {% if page_tag == 'blog' %}active{% endif %}"><a href="{% url 'blogs_page' %}"><span>Blog</span></a>
             <ul>
-                <li class="has-sub"><a href="#"><span>Item 1</span></a>
-                    <ul>
+                <li class="has-sub"><a href="{% url 'new_post_page' %}"><span>New Post</span></a>
+                    <!--ul>
                         <li><a href="#"><span>Sub Item</span></a></li>
                         <li class="last"><a href="#"><span>Sub Item</span></a></li>
-                    </ul>
+                    </ul-->
                 </li>
                 <li class="has-sub"><a href="#"><span>Item 2</span></a>
                     <ul>

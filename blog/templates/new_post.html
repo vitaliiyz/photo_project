@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<section class="content-box zerogrid">
+    <div class="row wrap-box">
+        <h3 class="t-center" style="font-size: 30px;margin: 10px 0 30px">Contact Form</h3>
+        <h1>Create New Post</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Create">
+        </form>
+    </div>
+</section>
+{% endblock main %}

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "home",
     "contact",
     "account",
+    "blog",
 ]
 
 MIDDLEWARE = [
@@ -106,6 +107,9 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "photo_art" / "static"]
 
+MEDIA_URL = "media/"
+MEDIA_ROOT = BASE_DIR / "photo_art" / "media"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -114,3 +118,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 LOGIN_REDIRECT_URL = "/"
 LOGIN_URL = "/account/login"
 LOGOUT_REDIRECT_URL = "/"
+
+COUNT_PAGES = 5

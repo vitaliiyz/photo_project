@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load blog_lib %}
+
+{% block main %}
+    <section class="content-box zerogrid">
+        <h1>{{ object.title }}</h1>
+        <img src="{{ object.image.url }}" alt="Post image">
+        <p>{{ object.text }}</p>
+        <p>{{ object.author }} - <span>{{ object.views }} views</span></p>
+        <p>Created - {{ object.created }}</p>
+    </section>
+{% endblock main %}
